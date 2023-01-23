@@ -1,9 +1,12 @@
-const Movie = ( { movie } ) => {
+import { FaTimes } from 'react-icons/fa';
+
+const Movie = ( { movie, deleteMe, myFavorite } ) => {
     return (
-        <div className="movie">
+        <div className={`movie ${movie.fav?'favorite':''}`} onDoubleClick={e => myFavorite(movie.id)}>
+            <FaTimes className="close" style={{color:'red', cursor:'pointer'}} onClick={e => deleteMe(movie.id)}/>
             <h1>{movie.name}</h1>
-            <span className="genre">{movie.genre}</span>
-            <span className="release">{movie.release}</span>
+            <h4>Genre : {movie.genre}</h4>
+            <h4>Release year : {movie.release}</h4>
         </div>
     )
 }
