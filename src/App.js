@@ -46,13 +46,11 @@ const App = () => {
     },
   ])
 
-  const searchMe = (t) => {
-    setTerm(t.toLowerCase());
-    console.log(t.toLowerCase());
-    setMovies(movies.filter(movie => {
-      console.log(movie); 
-      return movie.name.toLowerCase().includes(term);
-    }))
+  const searchMe = (res) => {
+    let t = res;
+    setTerm(t);
+    console.log(term);
+    setMovies(movies.filter(movie => movie.name.toLowerCase().includes(t))); 
   }
 
   const deleteMe = (id) => {
