@@ -38,6 +38,8 @@
 }
 
 
-.header{display:flex; flex-direction: rows; justify-content: space-between; }
+.header{display:flex; flex-direction: rows; justify-content: space-between; border-bottom:2px solid darkblue;}
 .header .nav a{display:inline-block; flex-direction: row; margin:20px 5px; text-decoration: none; background:darkblue;padding:10px 12px; color:#fff; border-radius: 10px; transition: all .5s; font-weight: bold;}
 .header .nav a:hover{background:#fff; color:darkblue; box-shadow: 1px 2px 5px #000; }
+div.movie-container{display:grid; color:lightyellow; column-gap: 20px; row-gap: 20px; grid-template-columns: auto auto;}
+div.movie{padding:20px; margin:20px; border-radius: 10px; text-align: center; background:black;}
