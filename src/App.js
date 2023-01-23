@@ -1,9 +1,12 @@
-function App() {
+import Header from './components/Header'; 
+
+const App = () => {
   return (
     <div className="App">
-      <h1>MovieCon - Movie library</h1>
+      <Header title="MovieCon" />
     </div>
-  );
+
+  )
 }
 
-export default App;
+export default App; 
