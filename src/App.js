@@ -5,7 +5,6 @@ import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm'; 
 
 const App = () => {
-
   const [showForm, setShowForm] = useState(false);
   const [term, setTerm] = useState('');
   const [movies, setMovies] = useState([
@@ -29,21 +28,7 @@ const App = () => {
       genre : 'Romantic',
       release : '2007',
       fav: true
-    },
-    {
-      id : 4,
-      name : 'Movie 4',
-      genre : 'Drama',
-      release : '2002',
-      fav: false
-    },
-    {
-      id : 5,
-      name : 'Movie 5',
-      genre : 'Romantic',
-      release : '2007',
-      fav: false
-    },
+    }
   ])
 
   const searchMe = (res) => {
