@@ -5,8 +5,6 @@ const Header = ({title}) => {
             <nav className="nav menu">
                 <a className="menu-item" href="#">Home</a>
                 <a className="menu-item" href="#">Movies</a>
-                <a className="menu-item" href="#">Web Series</a>
-                <a className="menu-item" href="#">Kids Show</a>
             </nav>
         </header>
     )

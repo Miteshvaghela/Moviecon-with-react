@@ -5,9 +5,7 @@ import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm'; 
 
 const App = () => {
-  const [showForm, setShowForm] = useState(false);
-  const [term, setTerm] = useState('');
-  const [movies, setMovies] = useState([
+  const MOVIES = [
     {
       id : 1,
       name : 'Movie 1',
@@ -29,13 +27,15 @@ const App = () => {
       release : '2007',
       fav: true
     }
-  ])
+  ];
+  const [showForm, setShowForm] = useState(false);
+  const [term, setTerm] = useState('');
+  const [movies, setMovies] = useState(MOVIES);
 
   const searchMe = (res) => {
-    let t = res;
-    setTerm(t);
-    console.log(term);
-    setMovies(movies.filter(movie => movie.name.toLowerCase().includes(t))); 
+    setMovies(MOVIES.filter(movie => movie.name.toLowerCase().indexOf(res.toLowerCase()) !== -1)); 
+    console.log(movies);
+    console.log(res); 
   }
 
   const deleteMe = (id) => {
@@ -52,9 +52,7 @@ const App = () => {
       {showForm && <MovieForm />}
       <Movies movies={movies} deleteMe={deleteMe} myFavorite={myFavorite} />
     </div>
-
-
-  )
+  );
 }
 
 export default App; 
