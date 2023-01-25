@@ -37,7 +37,6 @@
   }
 }
 
-
 .header{
     display:flex; flex-direction: rows; justify-content: space-between; border-bottom:2px solid darkblue;
 }
