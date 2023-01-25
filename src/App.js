@@ -38,6 +38,11 @@ const App = () => {
     console.log(res); 
   }
 
+  const addMovie = (obj) => {
+    console.log(obj); 
+    //setMovies([...movies, obj]);
+  }
+
   const deleteMe = (id) => {
     setMovies(movies.filter(movie => movie.id !== id));
   }
