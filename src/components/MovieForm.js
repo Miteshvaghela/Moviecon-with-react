@@ -1,15 +1,28 @@
 import { useState } from 'react';
-
-
-const MovieForm = () => {
+const MovieForm = ({addMovie}) => {
 
     const [name, setName] = useState('');
     const [genre, setGenre] = useState('');
     const [year, setYear] = useState('');
     const [fav, setFav] = useState(false);
 
+    const saveMovie = (e) => {
+        e.preventDefault(); 
+
+        if(!name.length || name == 'undefined'){
+            alert('Please enter valid movie name.');
+        }
+
+        addMovie({name, genre, year, fav});
+
+        setName('');
+        setGenre('');
+        setYear('');
+        setFav(false);
+    }
+
     return (
-        <form className="movie-form form">
+        <form className="movie-form form" onSubmit={ saveMovie }>
             <h2>Add new movie</h2>
             <div className="form-control">  
                 <label>Movie Name</label>

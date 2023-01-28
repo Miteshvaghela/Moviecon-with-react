@@ -1,7 +1,7 @@
-import { React, useState } from 'react';
+import { useState, useEffect } from 'react'; 
 import Header from './components/Header'; 
-import Movies from './components/Movies';
-import SearchBar from './components/SearchBar'; 
+import Movies from './components/Movies'; 
+import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm'; 
 
 const App = () => {
@@ -42,7 +42,6 @@ const App = () => {
     console.log(obj); 
     //setMovies([...movies, obj]);
   }
-
   const deleteMe = (id) => {
     setMovies(movies.filter(movie => movie.id !== id));
   }
@@ -54,7 +53,7 @@ const App = () => {
     <div className="App">
       <Header title="MovieCon" />
       <SearchBar searchMe={searchMe} />
-      {showForm && <MovieForm />}
+      {showForm && <MovieForm addMovie={addMovie} />}
       <Movies movies={movies} deleteMe={deleteMe} myFavorite={myFavorite} />
     </div>
   );
