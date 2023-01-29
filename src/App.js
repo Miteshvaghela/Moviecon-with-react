@@ -33,9 +33,7 @@ const App = () => {
   const [movies, setMovies] = useState(MOVIES);
 
   const searchMe = (res) => {
-    setMovies(MOVIES.filter(movie => movie.name.toLowerCase().indexOf(res.toLowerCase()) !== -1)); 
-    console.log(movies);
-    console.log(res); 
+    setMovies(MOVIES.filter(movie => movie.name.toLowerCase().indexOf(res.toLowerCase()) !== -1));  
   }
 
   const addMovie = (obj) => {
