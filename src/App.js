@@ -8,22 +8,22 @@ const App = () => {
   const MOVIES = [
     {
       id : 1,
-      name : 'Movie 1',
+      name : 'Spiderman',
       genre : 'Action, sci-fi',
       release : '1990',
       fav: true
     },
     {
       id : 2,
-      name : 'Movie 2',
-      genre : 'Drama',
+      name : 'Superman',
+      genre : 'Action',
       release : '2002',
       fav: false
     },
     {
       id : 3,
-      name : 'Movie 3',
-      genre : 'Romantic',
+      name : 'Avatar 1',
+      genre : 'Sci-fi',
       release : '2007',
       fav: true
     }
