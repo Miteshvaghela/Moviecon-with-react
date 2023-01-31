@@ -8,13 +8,10 @@ const MovieForm = ({addMovie}) => {
 
     const saveMovie = (e) => {
         e.preventDefault(); 
-
         if(!name.length || name == 'undefined'){
             alert('Please enter valid movie name.');
         }
-
         addMovie({name, genre, year, fav});
-
         setName('');
         setGenre('');
         setYear('');

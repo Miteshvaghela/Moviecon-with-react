@@ -1,5 +1,3 @@
-import React from 'react'; 
-
 const SearchBar = ({searchMe}) => {
     return (
         <form className="form search-form">
