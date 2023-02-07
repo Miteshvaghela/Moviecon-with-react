@@ -12,6 +12,20 @@ const App = () => {
       genre : 'Action, sci-fi',
       release : '1990',
       fav: true
+    },
+    {
+      id : 2,
+      name : 'Superman',
+      genre : 'Action',
+      release : '2002',
+      fav: false
+    },
+    {
+      id : 3,
+      name : 'Avatar 1',
+      genre : 'Sci-fi',
+      release : '2007',
+      fav: true
     }
   ];
   const [showForm, setShowForm] = useState(false);

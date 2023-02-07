@@ -65,4 +65,4 @@ div.movie:hover{box-shadow: 1px 1px 40px gray;}
 .form label{width:160px; display: inline-block;}
 .form .btn{background:darkblue; color:#fff; margin:20px 0px; padding:10px 15px}
 .search-form {text-align: center;}
-.favorite{border:10px solid greenyellow !important}
+.favorite{border-left:8px solid red !important}
