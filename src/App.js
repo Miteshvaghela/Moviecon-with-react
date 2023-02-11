@@ -6,13 +6,35 @@ import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm'; 
 
 const App = () => {
-  const MOVIES = [];
   const [showForm, setShowForm] = useState(false);
   const [term, setTerm] = useState('');
-  const [movies, setMovies] = useState(MOVIES);
+  const [movies, setMovies] = useState([]);
+
+  useEffect(() => {
+
+    const getMovieData = async () => {
+      const data = await fetchAllMovies();
+      setMovies(data);
+    }
+
+    getMovieData();
+
+  }, []);
+
+  const fetchAllMovies = async () => {
+    let resMovies = await fetch('http://localhost:8000/movies');
+    let res = await resMovies.json();
+    return res;
+  }
+
+  const fetchMovie = async ( id ) => {
+    let resMovie = await fetch(`http://localhost:8000/movies/${id}`);
+    let res = await resMovie.json();
+    return res;
+  }
 
   const searchMe = (res) => {
-    setMovies(MOVIES.filter(movie => movie.name.toLowerCase().indexOf(res.toLowerCase()) !== -1));  
+    setMovies(movies.filter(movie => movie.name.toLowerCase().indexOf(res.toLowerCase()) !== -1));  
   }
 
   const addMovie = (obj) => { 
