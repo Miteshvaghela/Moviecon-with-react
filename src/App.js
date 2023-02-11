@@ -22,7 +22,7 @@ const App = () => {
     let resMovies = await fetch('http://localhost:8000/movies');
     let res = await resMovies.json();    
     if(term.length){
-      return res.filter(movie => movie.title.toLowerCase().includes(term.toLowerCase()));  
+      return res.filter(movie => movie.title.toLowerCase().includes(term.trim().toLowerCase()));  
     }else{
       return res;
     }
@@ -43,6 +43,7 @@ const App = () => {
     if(typeof obj === 'object'){     
 
       // post to api 
+      obj.title = obj.title.trim();
 
       await fetch('http://localhost:8000/movies', {
         method : 'post',
