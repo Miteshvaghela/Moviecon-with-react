@@ -1,20 +1,39 @@
 {
   "movies": [
     {
-      "id": 1,
-      "title": "Spider-man",
-      "genre": "sci-fi",
-      "director": "Director name ",
+      "id": 183,
+      "title": "Thor",
+      "genre": "action",
       "year": "2007",
       "favorite": true
     },
     {
-      "id": 2,
-      "title": "Antman",
-      "genre": "sci-fi",
-      "director": "Director name ",
-      "year": "2010",
+      "id": 886,
+      "title": "300",
+      "genre": "",
+      "year": "2007",
+      "favorite": true
+    },
+    {
+      "id": 39,
+      "title": "Spiderman",
+      "genre": "action",
+      "year": "2001",
       "favorite": false
+    },
+    {
+      "id": 307,
+      "title": "Spiderman 2",
+      "genre": "",
+      "year": "2008",
+      "favorite": true
+    },
+    {
+      "id": 391,
+      "title": "Aquaman",
+      "genre": "",
+      "year": "2017",
+      "favorite": true
     }
   ],
   "comments": [

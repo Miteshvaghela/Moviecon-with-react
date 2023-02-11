@@ -1,48 +1,51 @@
 import { React, useState, useEffect } from 'react';
 const MovieForm = ({addMovie}) => {
 
-    const [name, setName] = useState('');
+    const [title, setTitle] = useState('');
     const [genre, setGenre] = useState('');
     const [year, setYear] = useState('');
-    const [fav, setFav] = useState(false);
-
+    const [favorite, setFavorite] = useState(false);
     const saveMovie = (e) => {
-        e.preventDefault(); 
-        if(!name.length || name == 'undefined'){
+        e.preventDefault();
+        if(!title.length || title == 'undefined'){
             alert('Please enter valid movie name.');
+            return;
         }
-        addMovie({name, genre, year, fav});
-        setName('');
+        const id = Math.floor(Math.random() * 1000) + 1;
+        addMovie({id, title, genre, year, favorite});
+        setTitle('');
         setGenre('');
         setYear('');
-        setFav(false);
+        setFavorite(false);
     }
-
     return (
         <form className="movie-form form" onSubmit={ saveMovie }>
             <h2>Add new movie</h2>
             <div className="form-control">  
                 <label>Movie Name</label>
-                <input type="text" />
+                <input type="text" placeholder='Movie name' value={title} onChange={e => setTitle(e.currentTarget.value)
+                } />
             </div>
             <div className="form-control">  
                 <label>Genre</label>
-                <select>
+                <select onChange={e => setGenre(e.currentTarget.value) }>
                     <option value="">Select </option>
-                    <option>Action</option>
-                    <option>Advanture</option>
-                    <option>Drama</option>
-                    <option>Romantic</option>
-                    <option>Sci-fi</option>
+                    <option value="action">Action</option>
+                    <option value="advanture">Advanture</option>
+                    <option value="drama">Drama</option>
+                    <option value="romantic">Romantic</option>
+                    <option value="sci-fi">Sci-fi</option>
                 </select>
             </div>
             <div className="form-control">  
                 <label>Release year</label>
-                <input type="text" />
+                <input type="text" value={year} onChange={e => setYear(e.currentTarget.value)
+                } />
             </div>
             <div className="form-control">  
                 <label>Favorite</label>
-                <input type="checkbox" />
+                <input type="checkbox" checked={favorite} onChange={e => setFavorite(e.currentTarget.checked)
+                }/>
             </div>
             <div className="form-control">  
                 <input type="submit" value="Save Movie" className="btn" />
