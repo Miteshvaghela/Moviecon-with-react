@@ -2,10 +2,6 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -58,6 +54,7 @@ div.movie:hover{box-shadow: 1px 1px 40px gray;}
   right:15px;
   top:15px;
 }
+.container{min-height:500px;}
 .movie-form, .form{display:block; text-align: left; width:80%; margin:auto;}
 .form input,
 .form select { padding:8px 12px; margin:10px}

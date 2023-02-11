@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'; 
 import Header from './components/Header'; 
+import Footer from './components/Footer';
 import Movies from './components/Movies'; 
 import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm'; 
@@ -26,9 +27,12 @@ const App = () => {
   return (
     <div className="App">
       <Header title="MovieCon" />
-      <SearchBar searchMe={searchMe} />
-      {showForm && <MovieForm addMovie={addMovie} />}
-      <Movies movies={movies} deleteMe={deleteMe} myFavorite={myFavorite} />
+      <div className="container">    
+        <SearchBar searchMe={searchMe} />
+        {showForm && <MovieForm addMovie={addMovie} />}
+        <Movies movies={movies} deleteMe={deleteMe} myFavorite={myFavorite} />
+      </div>
+      <Footer copyright="All rights are reserved Funtechstic.com"/>
     </div>
   );
 }

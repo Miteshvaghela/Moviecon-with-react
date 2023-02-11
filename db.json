@@ -1,0 +1,53 @@
+{
+  "movies": [
+    {
+      "id": 1,
+      "title": "Spider-man",
+      "director": "Director name ",
+      "year": "2007",
+      "favorite": true
+
+    },
+    {
+      "id": 2,
+      "title": "Antman",
+      "director": "Director name ",
+      "year": "2010",
+      "favorite": false
+    },
+    {
+      "id": 3,
+      "title": "Hulk",
+      "director": "Director name ",
+      "year": "2006",
+      "favorite": true
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "miteshvaghela",
+      "email": "miteshvaghela@funtechstic.com",
+      "picture": ""
+    },
+    {
+      "id": 2,
+      "username": "Jacksparrow",
+      "email": "jack.sparrow@funtechstic.com",
+      "picture": ""
+    },
+    {
+      "id": 3,
+      "username": "Ajaysingh",
+      "email": "ajaysingh@funtechstic.com",
+      "picture": ""
+    }
+  ]
+}
