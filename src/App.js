@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react'; 
+import React, { useState, useEffect } from 'react'; 
 import Header from './components/Header'; 
 import Footer from './components/Footer';
 import Movies from './components/Movies'; 
@@ -13,37 +13,55 @@ const App = () => {
   useEffect(() => {
 
     const getMovieData = async () => {
-      const data = await fetchAllMovies();
+      const data = await fetchAllMovies(term);
       setMovies(data);
     }
 
     getMovieData();
 
-  }, []);
+  });
 
-  const fetchAllMovies = async () => {
+  const fetchAllMovies = async (term) => {
     let resMovies = await fetch('http://localhost:8000/movies');
-    let res = await resMovies.json();
-    return res;
+    let res = await resMovies.json();    
+    if(term.length){
+      return res.filter(movie => movie.title.toLowerCase().includes(term.toLowerCase()));  
+    }else{
+      return res;
+    }
+  }
+  
+  const searchMe = (res) => {    
+    setTerm(res);
   }
 
   const fetchMovie = async ( id ) => {
     let resMovie = await fetch(`http://localhost:8000/movies/${id}`);
     let res = await resMovie.json();
     return res;
-  }
-
-  const searchMe = (res) => {
-    setMovies(movies.filter(movie => movie.name.toLowerCase().indexOf(res.toLowerCase()) !== -1));  
-  }
+  } 
 
   const addMovie = (obj) => { 
   }
-  const deleteMe = (id) => {
+  const deleteMe = async (id) => {
+    await fetch(`http://localhost:8000/movies/${id}`, {
+      method : 'DELETE'
+    })
     setMovies(movies.filter(movie => movie.id !== id));
   }
-  const myFavorite = (id) => {
-    setMovies(movies.map(movie => (movie.id === id)? {...movie, fav:!movie.fav}:movie));
+  const myFavorite = async (id) => {
+    const movie = await fetchMovie(id);
+    if(typeof movie === 'object'){
+      movie.favorite = !movie.favorite;
+    }
+    await fetch(`http://localhost:8000/movies/${id}`,{
+      method : 'put',
+      headers : {
+        'content-type' : 'application/json'
+      },
+      body : JSON.stringify(movie)
+    });
+    setMovies(movies.map(movie => (movie.id === id)? {...movie, favorite:!movie.favorite}:movie));
   }
 
   return (
