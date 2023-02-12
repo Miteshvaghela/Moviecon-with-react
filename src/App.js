@@ -52,12 +52,8 @@ const App = () => {
         },
         body : JSON.stringify(obj)
       });
-
       setMovies([...movies, obj]);
-
     }
-
-
   }
   const deleteMe = async (id) => {
     await fetch(`http://localhost:8000/movies/${id}`, {
@@ -91,5 +87,4 @@ const App = () => {
     </div>
   );
 }
-
-export default App; 
+export default App;
