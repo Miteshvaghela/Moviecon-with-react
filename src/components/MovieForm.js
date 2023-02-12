@@ -24,11 +24,11 @@ const MovieForm = ({addMovie}) => {
             <div className="form-control">  
                 <label>Movie Name</label>
                 <input type="text" placeholder='Movie name' value={title} onChange={e => setTitle(e.currentTarget.value)
-                } />
+                } required />
             </div>
             <div className="form-control">  
                 <label>Genre</label>
-                <select onChange={e => setGenre(e.currentTarget.value) }>
+                <select required onChange={e => setGenre(e.currentTarget.value) }>
                     <option value="">Select </option>
                     <option value="action">Action</option>
                     <option value="advanture">Advanture</option>
@@ -39,7 +39,7 @@ const MovieForm = ({addMovie}) => {
             </div>
             <div className="form-control">  
                 <label>Release year</label>
-                <input type="text" value={year} onChange={e => setYear(e.currentTarget.value)
+                <input type="number" required value={year} onChange={e => setYear(e.currentTarget.value)
                 } />
             </div>
             <div className="form-control">  
