@@ -1,24 +1,17 @@
 {
   "movies": [
     {
-      "id": 620,
-      "title": "Spiderman",
+      "id": 736,
+      "title": "Thor",
       "genre": "action",
       "year": "2001",
       "favorite": true
     },
     {
-      "id": 862,
-      "title": "Thor",
-      "genre": "",
-      "year": "2006",
-      "favorite": true
-    },
-    {
-      "id": 514,
-      "title": "Pursuite of happiness",
+      "id": 689,
+      "title": "Pursuit of happiness",
       "genre": "drama",
-      "year": "2008",
+      "year": "2001",
       "favorite": true
     }
   ],
