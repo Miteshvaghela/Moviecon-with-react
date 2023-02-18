@@ -64,8 +64,8 @@ const App = () => {
       method : 'DELETE'
     })
     setMovies(movies.filter(movie => movie.id !== id));
-  }
 
+  }
   const myFavorite = async (id) => {
     const movie = await fetchMovie(id);
     if(typeof movie === 'object'){

@@ -5,7 +5,28 @@
       "title": "Spiderman",
       "genre": "action",
       "year": "2001",
+      "favorite": true
+    },
+    {
+      "id": 156,
+      "title": "Hulk",
+      "genre": "action",
+      "year": "2007",
+      "favorite": true
+    },
+    {
+      "id": 867,
+      "title": "Spiderman 2",
+      "genre": "",
+      "year": "2008",
       "favorite": false
+    },
+    {
+      "id": 191,
+      "title": "Incredible Hulk",
+      "genre": "",
+      "year": "2007",
+      "favorite": true
     }
   ],
   "comments": [
