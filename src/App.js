@@ -4,12 +4,10 @@ import Footer from './components/Footer';
 import Movies from './components/Movies';
 import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm';
-
 const App = () => {
   const [showForm, setShowForm] = useState(false);
   const [term, setTerm] = useState('');
   const [movies, setMovies] = useState([]);
-
   useEffect(() => {
     const getMovieData = async () => {
       const data = await fetchAllMovies(term);
@@ -17,7 +15,6 @@ const App = () => {
     }
     getMovieData();
   });
-
   const fetchAllMovies = async (term) => {
     let resMovies = await fetch('http://localhost:8000/movies');
     let res = await resMovies.json();    
@@ -26,8 +23,7 @@ const App = () => {
     }else{
       return res;
     }
-  }  
-
+  }
   const searchMe = (res) => {    
     setTerm(res);
     console.log(res);
@@ -61,7 +57,6 @@ const App = () => {
       setMovies([...movies, obj]);
     }
   }
-
   const deleteMe = async (id) => {
     await fetch(`http://localhost:8000/movies/${id}`, {
       method : 'DELETE'
@@ -83,7 +78,6 @@ const App = () => {
     });
     setMovies(movies.map(movie => (movie.id === id)? {...movie, favorite:!movie.favorite}:movie));
   }
-
   return (
     <div className="App">
       <Header title="MovieCon" />
