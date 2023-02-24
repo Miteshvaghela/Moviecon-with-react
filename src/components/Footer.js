@@ -1,7 +1,7 @@
 const Footer = ({copyright}) => {
     return (
         <footer>
-            <div><h3>{copyright}</h3></div>
+            <div><span>{copyright}</span></div>
         </footer>
     )
 }
