@@ -6,6 +6,7 @@ import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm';
 
 const App = () => {
+
   const [showForm, setShowForm] = useState(false);
   const [term, setTerm] = useState('');
   const [movies, setMovies] = useState([]);
@@ -17,6 +18,7 @@ const App = () => {
     }
     getMovieData();
   });
+  
   const fetchAllMovies = async (term) => {
     let resMovies = await fetch('http://localhost:8000/movies');
     let res = await resMovies.json();    

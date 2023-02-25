@@ -1,4 +1,4 @@
-import { React, useState, useEffect } from 'react';
+import { React, useState } from 'react';
 const MovieForm = ({addMovie}) => {
 
     const [title, setTitle] = useState('');
@@ -35,6 +35,7 @@ const MovieForm = ({addMovie}) => {
                     <option value="drama">Drama</option>
                     <option value="romantic">Romantic</option>
                     <option value="sci-fi">Sci-fi</option>
+                    <option value="horror">Horror</option>
                 </select>
             </div>
             <div className="form-control">  
