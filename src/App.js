@@ -32,8 +32,6 @@ const App = () => {
     setTerm(res);
     console.log(res);
   }
-
-
   const fetchMovie = async ( id ) => {
     let resMovie = await fetch(`http://localhost:8000/movies/${id}`);
     let res = await resMovie.json();
@@ -94,5 +92,4 @@ const App = () => {
     </div>
   );
 }
-
 export default App;
