@@ -1,3 +1,5 @@
+import React from 'react';
+
 const SearchBar = ({searchMe, showMovieform}) => {
     return (
         <form className="form search-form">

@@ -1,5 +1,4 @@
 import Movie from './Movie';
-
 const Movies = ({ movies, deleteMe, myFavorite }) => {
     return (
         <div>
