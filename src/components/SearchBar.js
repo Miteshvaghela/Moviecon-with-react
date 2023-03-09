@@ -1,5 +1,4 @@
 import React from 'react';
-
 const SearchBar = ({searchMe, showMovieform}) => {
     return (
         <form className="form search-form">
@@ -10,5 +9,4 @@ const SearchBar = ({searchMe, showMovieform}) => {
         </form>
     )
 }
-
 export default SearchBar;
