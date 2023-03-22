@@ -4,10 +4,9 @@ import Footer from './components/Footer';
 import Movies from './components/Movies';
 import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm';
-import React, {useEffect, useState} from 'react';
 
 const App = () => {
-  
+
   const [showForm, setShowForm] = useState(false);
   const [term, setTerm] = useState('');
   const [movies, setMovies] = useState([]);
@@ -33,6 +32,7 @@ const App = () => {
     setTerm(res);
     console.log(res);
   }
+  
   const fetchMovie = async ( id ) => {
     let resMovie = await fetch(`http://localhost:8000/movies/${id}`);
     let res = await resMovie.json();

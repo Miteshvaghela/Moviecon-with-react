@@ -1,18 +1,32 @@
 {
   "movies": [
     {
-      "id": 79,
-      "title": "New movie",
+      "id": 700,
+      "title": "Spiderman",
       "genre": "action",
-      "year": "1997",
+      "year": "2001",
+      "favorite": true
+    },
+    {
+      "id": 828,
+      "title": "Incredible Hulk",
+      "genre": "action",
+      "year": "2007",
       "favorite": false
     },
     {
-      "id": 175,
+      "id": 165,
       "title": "Titanic",
       "genre": "romantic",
       "year": "1997",
       "favorite": true
+    },
+    {
+      "id": 740,
+      "title": "Jumanji",
+      "genre": "advanture",
+      "year": "1998",
+      "favorite": false
     }
   ],
   "comments": [

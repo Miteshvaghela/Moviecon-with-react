@@ -7,7 +7,7 @@ const MovieForm = ({addMovie}) => {
     const [favorite, setFavorite] = useState(false);
     const saveMovie = (e) => {
         e.preventDefault();
-        if(!title.length || title == 'undefined'){
+        if(!title.length || title === 'undefined'){
             alert('Please enter valid movie name.');
             return;
         }
