@@ -10,5 +10,4 @@ const Movies = ({ movies, deleteMe, myFavorite }) => {
         </div>
     )
 }
-
 export default Movies;
