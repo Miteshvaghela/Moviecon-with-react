@@ -60,6 +60,7 @@ const App = () => {
       setMovies([...movies, obj]);
     }
   }
+
   const deleteMe = async (id) => {
     await fetch(`http://localhost:8000/movies/${id}`, {
       method : 'DELETE'
@@ -67,6 +68,7 @@ const App = () => {
     setMovies(movies.filter(movie => movie.id !== id));
 
   }
+
   const myFavorite = async (id) => {
     const movie = await fetchMovie(id);
     if(typeof movie === 'object'){
@@ -81,6 +83,7 @@ const App = () => {
     });
     setMovies(movies.map(movie => (movie.id === id)? {...movie, favorite:!movie.favorite}:movie));
   }
+  
   return (
     <div className="App">
       <Header title="MovieCon"/>
