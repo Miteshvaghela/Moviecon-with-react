@@ -28,6 +28,10 @@ const App = () => {
       return res;
     }
   }
+  const dummyMovies = (res) => {
+
+  }
+
   const searchMe = (res) => {    
     setTerm(res);
     console.log(res);
