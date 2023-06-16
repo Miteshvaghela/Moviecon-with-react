@@ -5,5 +5,4 @@ const Footer = ({copyright}) => {
         </footer>
     )
 }
-
 export default Footer;
