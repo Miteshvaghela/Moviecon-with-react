@@ -1,4 +1,4 @@
-import { React, useState } from 'react';
+import { useState } from 'react';
 const MovieForm = ({addMovie}) => {
     const [title, setTitle] = useState('');
     const [genre, setGenre] = useState('');
