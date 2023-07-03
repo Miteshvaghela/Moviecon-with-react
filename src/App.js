@@ -67,7 +67,6 @@ const App = () => {
       method : 'DELETE'
     })
     setMovies(movies.filter(movie => movie.id !== id));
-
   }
 
   const myFavorite = async (id) => {
