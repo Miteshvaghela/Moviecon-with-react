@@ -10,6 +10,7 @@ const App = () => {
   const [showForm, setShowForm] = useState(false);
   const [term, setTerm] = useState('');
   const [movies, setMovies] = useState([]);
+  const [emp, setEmp] = userState([]);
 
   useEffect(() => {
     const getMovieData = async () => {
