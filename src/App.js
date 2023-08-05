@@ -5,8 +5,7 @@ import Movies from './components/Movies';
 import SearchBar from './components/SearchBar';
 import MovieForm from './components/MovieForm';
 
-const App = () => {
-  const [users, setUsers] = useState([]);
+const App = () => { 
   const [showForm, setShowForm] = useState(false);
   const [term, setTerm] = useState('');
   const [movies, setMovies] = useState([]);
