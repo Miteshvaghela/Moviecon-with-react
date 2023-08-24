@@ -3,7 +3,7 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import Movies from './components/Movies';
 import SearchBar from './components/SearchBar';
-import MovieForm from './components/MovieForm';
+import MovieForm from './components/MovieForm'; 
 
 const App = () => { 
   const [showForm, setShowForm] = useState(false);
