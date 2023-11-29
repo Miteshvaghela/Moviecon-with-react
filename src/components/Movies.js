@@ -12,3 +12,5 @@ const Movies = ({ movies, deleteMe, myFavorite }) => {
     )
 }
 export default Movies;
+
+
