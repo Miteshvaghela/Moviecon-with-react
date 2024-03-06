@@ -12,14 +12,14 @@
       "title": "Incredible Hulk",
       "genre": "action",
       "year": "2007",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 120,
       "title": "Tset movie",
       "genre": "advanture",
       "year": "1990",
-      "favorite": false
+      "favorite": true
     },
     {
       "id": 80,
