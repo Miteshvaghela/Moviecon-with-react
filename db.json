@@ -15,17 +15,24 @@
       "favorite": false
     },
     {
-      "id": 165,
-      "title": "Titanic",
-      "genre": "romantic",
-      "year": "1997",
-      "favorite": true
+      "id": 120,
+      "title": "Tset movie",
+      "genre": "advanture",
+      "year": "1990",
+      "favorite": false
     },
     {
-      "id": 740,
+      "id": 80,
       "title": "Jumanji",
-      "genre": "advanture",
-      "year": "1998",
+      "genre": "",
+      "year": "1995",
+      "favorite": false
+    },
+    {
+      "id": 895,
+      "title": "Ironman",
+      "genre": "sci-fi",
+      "year": "2000",
       "favorite": false
     }
   ],
